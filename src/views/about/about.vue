@@ -97,7 +97,7 @@ export default {
         font-size: 18px;
     }
       .aboutcameron{
-        margin-left: 5%
+        margin-left: 10%;
 
     }
 </style>
