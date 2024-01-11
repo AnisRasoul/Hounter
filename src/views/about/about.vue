@@ -35,7 +35,7 @@
         </div>
         <div class=" col-sm-12 col-md-4 ms-5 mt-5">
                 <img src="../../assets/about/Cameron-villa.png" id="cameron">
-                <div class="d-flex mt-2 aboutcameron">
+                <div class="d-flex mt-2">
                 <img src="../../assets/about/Frame 19.svg" alt="">
                 </div>
                 <h2>12 Things to know before buying a house</h2>
@@ -96,8 +96,5 @@ export default {
         max-width: 60%;
         font-size: 18px;
     }
-      .aboutcameron{
-        margin-left: 10%;
-
     }
 </style>
