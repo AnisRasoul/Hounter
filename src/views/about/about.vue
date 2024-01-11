@@ -96,5 +96,6 @@ export default {
         max-width: 60%;
         font-size: 18px;
     }
+
     }
 </style>
