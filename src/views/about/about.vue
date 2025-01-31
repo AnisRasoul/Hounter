@@ -3,7 +3,7 @@
      <div class="text-center">
         <img src="../../assets/about/Group 10.png">
         <h2 class="mt-2">Find Out More About <br> Selling And Buying Homes</h2>
-        <button class="navbtn mt-4" style="background-color:#10B981 ;">More Artikel</button>
+        <button class="navbtn mt-4" style="background-color:#10B981 ;">More Article</button>
      </div>
      <div class="container">
      <div class="row mt-5">

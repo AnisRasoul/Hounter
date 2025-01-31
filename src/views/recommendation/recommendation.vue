@@ -6,9 +6,9 @@
             <h1>Featured House</h1> 
         </div>
         <div class="col sm-10 col-md-9 mt-2">
-            <button @click="showHouseCards" style="background-color:#D1FAE5; color:#10B981; outline: 1px solid #10B981;"><span><img src="../../assets/recommendation/house.svg" height="14px" class="mb-1 me-2"></span>House</button>
-            <button @click="showVillaCards"><span><img src="../../assets/recommendation/villa.svg" height="14px" class="mb-1 me-2"></span>Villa</button> 
-            <button @click="showApartmentCards"><span><img src="../../assets/recommendation/Appartment.svg" height="14px" class="mb-1 me-2"></span>Appartment</button> 
+            <button @click="showHouseCards" :class="{ active: activeButton === 'house' }"><span><img src="../../assets/recommendation/house.svg" height="14px" class="mb-1 me-2"></span>House</button>
+            <button @click="showVillaCards" :class="{ active: activeButton === 'villa' }"><span><img src="../../assets/recommendation/villa.svg" height="14px" class="mb-1 me-2"></span>Villa</button> 
+            <button @click="showApartmentCards" :class="{ active: activeButton === 'apartment' }"><span><img src="../../assets/recommendation/Appartment.svg" height="14px" class="mb-1 me-2"></span>Appartment</button> 
             <button><i class="fa-solid fa-chevron-left "></i></button> 
             <button><i class="fa-solid fa-chevron-right"></i></button> 
         </div> 
@@ -49,21 +49,28 @@ export default {
       { id: "9", cardImage:"https://i.pinimg.com/564x/60/22/d0/6022d07fc9bd655b14133901a6363cbd.jpg", cardDesc: "broklyn appartment", cardPrice: "$ 2.000.000", authorImage: "https://i.imgur.com/XyGcWhT.png" },
       
     ],
-    filteredCards: []
+    filteredCards: [],
+    activeButton: 'house'
     };
   },
   methods: {
     showHouseCards() {
       this.filteredCards = this.cards.filter(card => ['1', '2', '3'].includes(card.id));
+      this.activeButton = 'house';
     },
     showVillaCards() {
       this.filteredCards = this.cards.filter(card => ['4', '5', '6'].includes(card.id));
+      this.activeButton = 'villa';
     },
     showApartmentCards() {
       this.filteredCards = this.cards.filter(card => ['7', '8', '9'].includes(card.id));
+      this.activeButton = 'apartment';
     }
     
-  }
+  },
+  mounted() {
+      this.showHouseCards();
+    },
 };
 
 
@@ -89,6 +96,11 @@ color:#888B97;
 line-height: 26px;  
 margin-left: 2% ; 
     }
+    button.active {
+    background-color: #D1FAE5;
+    color: #10B981;
+    outline: 1px solid #10B981;
+  }
     @media (max-width: 800px){
       .recommendation{
       margin-left: 0% ;
